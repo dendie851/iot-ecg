@@ -24,6 +24,7 @@ A simple bio-electricity monitoring system using ESP32, AD8232 heart/muscle sens
   - [3. Evidence and Visual Demonstration](#3-evidence-and-visual-demonstration)
     - [3.1 Hardware Setup and Electrode Placement](#31-hardware-setup-and-electrode-placement)
     - [3.2 Real-time Signal Display and Indicator](#32-real-time-signal-display-and-indicator)
+  - [4. Video Demonstration](#4-video-demonstration)
 
 
 
@@ -168,3 +169,14 @@ The experimental setup and functional prototype testing are documented in the [`
 - **Visual Alert System**:
   - The top LED module illuminates a high-brightness Red light, providing instant physical feedback when the bio-electric voltage exceeds the preset threshold during muscle movement.
 - **Circuit Stability**: Confirms low noise, clean waveform rendering, and stable power delivery across all sensors and microcontroller peripherals during active operation.
+
+---
+
+## 4. Video Demonstration
+
+Watch the live functional demonstration of the IoT Bio-Electricity system on YouTube:
+
+[![IoT Bio-Electricity System Demonstration](https://img.youtube.com/vi/5yRmZoh6HkQ/hqdefault.jpg)](https://www.youtube.com/shorts/5yRmZoh6HkQ)
+
+📺 **Direct Link**: [Watch Video Demo on YouTube Shorts](https://www.youtube.com/shorts/5yRmZoh6HkQ)
+
