@@ -1,8 +1,8 @@
 # Bio-Electricity Monitoring and Control System
 
-A simple IoT-based bio-electricity monitoring system using ESP32, AD8232 heart/muscle sensor, OLED display, and status indicators to detect biopotential signals from human muscle contraction.
+A simple bio-electricity monitoring system using ESP32, AD8232 heart/muscle sensor, OLED display, and status indicators to detect biopotential signals from human muscle contraction.
 
----
+
 
 ## Table of Contents
 
@@ -25,7 +25,7 @@ A simple IoT-based bio-electricity monitoring system using ESP32, AD8232 heart/m
     - [3.1 Hardware Setup and Electrode Placement](#31-hardware-setup-and-electrode-placement)
     - [3.2 Real-time Signal Display and Indicator](#32-real-time-signal-display-and-indicator)
 
----
+
 
 ## 1. Story of Bio-Electricity
 
@@ -33,15 +33,15 @@ A simple IoT-based bio-electricity monitoring system using ESP32, AD8232 heart/m
 At the quantum level, everything in our universe is governed by subatomic particles. In our human body, electrons spin and jump across atomic energy levels. Key electrolytes like Sodium ($Na^+$) and Potassium ($K^+$) exist as charged ions because they have gained or lost electrons in their outer shell. This subatomic arrangement establishes microscopic electrical potential across every single living cell membrane.
 
 ```
-       +--------------------------------------------------+
+       +--+
        |   Quantum Level: Electron Transfer & Ionization |
        |          Na+ (Sodium)   and   K+ (Potassium)      |
-       +--------------------------------------------------+
+       +--+
                                 |
                                 v
-       +--------------------------------------------------+
+       +--+
        |  Cellular Level: Membrane Potential Gradient     |
-       +--------------------------------------------------+
+       +--+
 ```
 
 ### 1.2 Ion Transport in Blood and Intracellular Space
@@ -68,7 +68,7 @@ By amplifying and filtering these bio-voltage variations, we can:
 - Translate muscle activity into control signals for robotic hands, prosthetic limbs, or assistive exoskeletons to help individuals with disabilities perform daily tasks and work activities.
 
 ```
-  [ Skin Electrodes ] ---> [ Amplification ] ---> [ Motor Actuator ] ---> [ Robotic Arm Movement ]
+  [ Skin Electrodes ] > [ Amplification ] > [ Motor Actuator ] > [ Robotic Arm Movement ]
 ```
 
 ### 1.5 Remote Patient Monitoring via IoT
@@ -76,7 +76,7 @@ By integrating this bio-potential sensing hardware with an Internet of Things (I
 
 This enables healthcare providers to monitor patient health conditions, muscle recovery, or cardiac rhythms in real time from anywhere in the world, facilitating timely medical interventions and remote care.
 
----
+
 
 ## 2. System Architecture
 
@@ -112,15 +112,15 @@ The system centers around the **ESP32 Microcontroller**, which handles analog-to
 #### D. Power Supply
 - **Port USB** $\rightarrow$ Connected to a standard 5V DC USB power source (`Power DC 5V`) supplying regulated power to the ESP32 board and all peripheral components.
 
----
+
 
 ### 2.2 Signal Flow and Data Processing
 
 ```
-+-------------------+      +-------------------+      +-------------------+      +-------------------+
-|  Muscle Electrodes| ---> |   AD8232 Module   | ---> |  ESP32 ADC (VP)   | ---> |  OLED / LED / IoT |
++-+      +-+      +-+      +-+
+|  Muscle Electrodes| > |   AD8232 Module   | > |  ESP32 ADC (VP)   | > |  OLED / LED / IoT |
 |  (3 Surface Leads)|      | (Amplifier/Filter)|      | (Data Processing) |      | (Visual & Cloud)  |
-+-------------------+      +-------------------+      +-------------------+      +-------------------+
++-+      +-+      +-+      +-+
 ```
 
 1. **Signal Acquisition**: Three surface electrodes attached to the forearm capture microscopic voltage fluctuations generated during muscle flexion.
@@ -132,7 +132,7 @@ The system centers around the **ESP32 Microcontroller**, which handles analog-to
    - Controls status LEDs (`Pin 12`, `Pin 13`, `Pin 14`) to provide instant visual feedback on contraction intensity.
    - Transmits telemetry data via Wi-Fi/IoT protocols for remote monitoring.
 
----
+
 
 ## 3. Evidence and Visual Demonstration
 
@@ -154,7 +154,7 @@ The experimental setup and functional prototype testing are documented in the [`
   - The **0.96-inch OLED screen** is placed centrally to display real-time signal telemetry.
   - The **traffic light module** at the top illuminates a bright red indicator light when high contraction signals or active states are detected.
 
----
+
 
 ### 3.2 Real-time Signal Display and Indicator
 
