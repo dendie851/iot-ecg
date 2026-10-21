@@ -2,8 +2,6 @@
 
 A simple bio-electricity monitoring system using ESP32, AD8232 heart/muscle sensor, OLED display, and status indicators to detect biopotential signals from human muscle contraction.
 
-
-
 ## Table of Contents
 
 - [Bio-Electricity Monitoring and Control System](#bio-electricity-monitoring-and-control-system)
